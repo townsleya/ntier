@@ -1,4 +1,6 @@
-﻿using Middleware;
+﻿using System.Windows.Forms;
+using Client.DBDataSet5TableAdapters;
+using Middleware;
 
 namespace Client
 {
@@ -33,12 +35,54 @@ namespace Client
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView_Employees = new System.Windows.Forms.DataGridView();
+            this.employeeIdDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.middleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sSNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dBDataSet6 = new Client.DBDataSet6();
             this.dataGridView_Address = new System.Windows.Forms.DataGridView();
+            this.addressIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeIdDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.streetNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zipCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dBDataSet5 = new Client.DBDataSet5();
             this.dataGridView_Departments = new System.Windows.Forms.DataGridView();
+            this.departmentIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.departmenNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dBDataSet4 = new Client.DBDataSet4();
             this.dataGridView_Salaries = new System.Windows.Forms.DataGridView();
+            this.salaryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeIdDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salaryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dBDataSet3 = new Client.DBDataSet3();
             this.dataGridView_Supervisors = new System.Windows.Forms.DataGridView();
+            this.supervisorIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeIdDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supervisorEmployeeIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assignedDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.releasedDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supervisorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dBDataSet2 = new Client.DBDataSet2();
             this.dataGridView_EmployeeDepartment = new System.Windows.Forms.DataGridView();
+            this.employeeDeparmentIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.departmentIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeDeparmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dBDataSet1 = new Client.DBDataSet1();
             this.dataGridView_EmployeeService = new System.Windows.Forms.DataGridView();
+            this.employeeServiceIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeServiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dBDataSet = new Client.DBDataSet();
             this.button1 = new System.Windows.Forms.Button();
             this.label_Employee = new System.Windows.Forms.Label();
             this.label_Address = new System.Windows.Forms.Label();
@@ -47,76 +91,36 @@ namespace Client
             this.label_Supervisors = new System.Windows.Forms.Label();
             this.label_EmployeeDepartment = new System.Windows.Forms.Label();
             this.label_EmployeeService = new System.Windows.Forms.Label();
-            this.dBDataSet = new Client.DBDataSet();
-            this.employeeServiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeServiceTableAdapter = new Client.DBDataSetTableAdapters.EmployeeServiceTableAdapter();
-            this.employeeServiceIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employeeIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dBDataSet1 = new Client.DBDataSet1();
-            this.employeeDeparmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeDeparmentTableAdapter = new Client.DBDataSet1TableAdapters.EmployeeDeparmentTableAdapter();
-            this.employeeDeparmentIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employeeIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.departmentIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dBDataSet2 = new Client.DBDataSet2();
-            this.supervisorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.supervisorTableAdapter = new Client.DBDataSet2TableAdapters.SupervisorTableAdapter();
-            this.supervisorIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employeeIdDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supervisorEmployeeIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.assignedDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.releasedDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dBDataSet3 = new Client.DBDataSet3();
-            this.salaryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salaryTableAdapter = new Client.DBDataSet3TableAdapters.SalaryTableAdapter();
-            this.salaryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employeeIdDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dBDataSet4 = new Client.DBDataSet4();
-            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.departmentTableAdapter = new Client.DBDataSet4TableAdapters.DepartmentTableAdapter();
-            this.departmentIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.departmenNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dBDataSet5 = new Client.DBDataSet5();
-            this.addressBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.addressTableAdapter = new Client.DBDataSet5TableAdapters.AddressTableAdapter();
-            this.addressIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employeeIdDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.streetNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zipCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dBDataSet6 = new Client.DBDataSet6();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeTableAdapter = new Client.DBDataSet6TableAdapters.EmployeeTableAdapter();
-            this.employeeIdDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.middleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sSNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dbDataSet51 = new Client.DBDataSet5();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Employees)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Address)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Departments)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Salaries)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Supervisors)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_EmployeeDepartment)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_EmployeeService)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeServiceBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeDeparmentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supervisorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salaryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Address)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Departments)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Salaries)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salaryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Supervisors)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supervisorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_EmployeeDepartment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeDeparmentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_EmployeeService)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeServiceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbDataSet51)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView_Employees
@@ -138,6 +142,51 @@ namespace Client
             this.dataGridView_Employees.Size = new System.Drawing.Size(510, 91);
             this.dataGridView_Employees.TabIndex = 0;
             // 
+            // employeeIdDataGridViewTextBoxColumn5
+            // 
+            this.employeeIdDataGridViewTextBoxColumn5.DataPropertyName = "EmployeeId";
+            this.employeeIdDataGridViewTextBoxColumn5.HeaderText = "EmployeeId";
+            this.employeeIdDataGridViewTextBoxColumn5.Name = "employeeIdDataGridViewTextBoxColumn5";
+            this.employeeIdDataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // middleNameDataGridViewTextBoxColumn
+            // 
+            this.middleNameDataGridViewTextBoxColumn.DataPropertyName = "MiddleName";
+            this.middleNameDataGridViewTextBoxColumn.HeaderText = "MiddleName";
+            this.middleNameDataGridViewTextBoxColumn.Name = "middleNameDataGridViewTextBoxColumn";
+            this.middleNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sSNDataGridViewTextBoxColumn
+            // 
+            this.sSNDataGridViewTextBoxColumn.DataPropertyName = "SSN";
+            this.sSNDataGridViewTextBoxColumn.HeaderText = "SSN";
+            this.sSNDataGridViewTextBoxColumn.Name = "sSNDataGridViewTextBoxColumn";
+            this.sSNDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataMember = "Employee";
+            this.employeeBindingSource.DataSource = this.dBDataSet6;
+            // 
+            // dBDataSet6
+            // 
+            this.dBDataSet6.DataSetName = "DBDataSet6";
+            this.dBDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dataGridView_Address
             // 
             this.dataGridView_Address.AllowUserToAddRows = false;
@@ -158,6 +207,58 @@ namespace Client
             this.dataGridView_Address.Size = new System.Drawing.Size(510, 92);
             this.dataGridView_Address.TabIndex = 1;
             // 
+            // addressIdDataGridViewTextBoxColumn
+            // 
+            this.addressIdDataGridViewTextBoxColumn.DataPropertyName = "AddressId";
+            this.addressIdDataGridViewTextBoxColumn.HeaderText = "AddressId";
+            this.addressIdDataGridViewTextBoxColumn.Name = "addressIdDataGridViewTextBoxColumn";
+            this.addressIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // employeeIdDataGridViewTextBoxColumn4
+            // 
+            this.employeeIdDataGridViewTextBoxColumn4.DataPropertyName = "EmployeeId";
+            this.employeeIdDataGridViewTextBoxColumn4.HeaderText = "EmployeeId";
+            this.employeeIdDataGridViewTextBoxColumn4.Name = "employeeIdDataGridViewTextBoxColumn4";
+            this.employeeIdDataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // streetNumberDataGridViewTextBoxColumn
+            // 
+            this.streetNumberDataGridViewTextBoxColumn.DataPropertyName = "StreetNumber";
+            this.streetNumberDataGridViewTextBoxColumn.HeaderText = "StreetNumber";
+            this.streetNumberDataGridViewTextBoxColumn.Name = "streetNumberDataGridViewTextBoxColumn";
+            this.streetNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cityDataGridViewTextBoxColumn
+            // 
+            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
+            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
+            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            this.cityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // stateDataGridViewTextBoxColumn
+            // 
+            this.stateDataGridViewTextBoxColumn.DataPropertyName = "State";
+            this.stateDataGridViewTextBoxColumn.HeaderText = "State";
+            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            this.stateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // zipCodeDataGridViewTextBoxColumn
+            // 
+            this.zipCodeDataGridViewTextBoxColumn.DataPropertyName = "ZipCode";
+            this.zipCodeDataGridViewTextBoxColumn.HeaderText = "ZipCode";
+            this.zipCodeDataGridViewTextBoxColumn.Name = "zipCodeDataGridViewTextBoxColumn";
+            this.zipCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // addressBindingSource
+            // 
+            this.addressBindingSource.DataMember = "Address";
+            this.addressBindingSource.DataSource = this.dBDataSet5;
+            // 
+            // dBDataSet5
+            // 
+            this.dBDataSet5.DataSetName = "DBDataSet5";
+            this.dBDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dataGridView_Departments
             // 
             this.dataGridView_Departments.AllowUserToAddRows = false;
@@ -173,6 +274,30 @@ namespace Client
             this.dataGridView_Departments.ReadOnly = true;
             this.dataGridView_Departments.Size = new System.Drawing.Size(510, 96);
             this.dataGridView_Departments.TabIndex = 2;
+            // 
+            // departmentIdDataGridViewTextBoxColumn1
+            // 
+            this.departmentIdDataGridViewTextBoxColumn1.DataPropertyName = "DepartmentId";
+            this.departmentIdDataGridViewTextBoxColumn1.HeaderText = "DepartmentId";
+            this.departmentIdDataGridViewTextBoxColumn1.Name = "departmentIdDataGridViewTextBoxColumn1";
+            this.departmentIdDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // departmenNameDataGridViewTextBoxColumn
+            // 
+            this.departmenNameDataGridViewTextBoxColumn.DataPropertyName = "DepartmenName";
+            this.departmenNameDataGridViewTextBoxColumn.HeaderText = "DepartmenName";
+            this.departmenNameDataGridViewTextBoxColumn.Name = "departmenNameDataGridViewTextBoxColumn";
+            this.departmenNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // departmentBindingSource
+            // 
+            this.departmentBindingSource.DataMember = "Department";
+            this.departmentBindingSource.DataSource = this.dBDataSet4;
+            // 
+            // dBDataSet4
+            // 
+            this.dBDataSet4.DataSetName = "DBDataSet4";
+            this.dBDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridView_Salaries
             // 
@@ -190,6 +315,37 @@ namespace Client
             this.dataGridView_Salaries.ReadOnly = true;
             this.dataGridView_Salaries.Size = new System.Drawing.Size(510, 97);
             this.dataGridView_Salaries.TabIndex = 3;
+            // 
+            // salaryIdDataGridViewTextBoxColumn
+            // 
+            this.salaryIdDataGridViewTextBoxColumn.DataPropertyName = "SalaryId";
+            this.salaryIdDataGridViewTextBoxColumn.HeaderText = "SalaryId";
+            this.salaryIdDataGridViewTextBoxColumn.Name = "salaryIdDataGridViewTextBoxColumn";
+            this.salaryIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // employeeIdDataGridViewTextBoxColumn3
+            // 
+            this.employeeIdDataGridViewTextBoxColumn3.DataPropertyName = "EmployeeId";
+            this.employeeIdDataGridViewTextBoxColumn3.HeaderText = "EmployeeId";
+            this.employeeIdDataGridViewTextBoxColumn3.Name = "employeeIdDataGridViewTextBoxColumn3";
+            this.employeeIdDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // salaryDataGridViewTextBoxColumn
+            // 
+            this.salaryDataGridViewTextBoxColumn.DataPropertyName = "Salary";
+            this.salaryDataGridViewTextBoxColumn.HeaderText = "Salary";
+            this.salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
+            this.salaryDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // salaryBindingSource
+            // 
+            this.salaryBindingSource.DataMember = "Salary";
+            this.salaryBindingSource.DataSource = this.dBDataSet3;
+            // 
+            // dBDataSet3
+            // 
+            this.dBDataSet3.DataSetName = "DBDataSet3";
+            this.dBDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridView_Supervisors
             // 
@@ -210,6 +366,51 @@ namespace Client
             this.dataGridView_Supervisors.Size = new System.Drawing.Size(510, 94);
             this.dataGridView_Supervisors.TabIndex = 4;
             // 
+            // supervisorIdDataGridViewTextBoxColumn
+            // 
+            this.supervisorIdDataGridViewTextBoxColumn.DataPropertyName = "SupervisorId";
+            this.supervisorIdDataGridViewTextBoxColumn.HeaderText = "SupervisorId";
+            this.supervisorIdDataGridViewTextBoxColumn.Name = "supervisorIdDataGridViewTextBoxColumn";
+            this.supervisorIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // employeeIdDataGridViewTextBoxColumn2
+            // 
+            this.employeeIdDataGridViewTextBoxColumn2.DataPropertyName = "EmployeeId";
+            this.employeeIdDataGridViewTextBoxColumn2.HeaderText = "EmployeeId";
+            this.employeeIdDataGridViewTextBoxColumn2.Name = "employeeIdDataGridViewTextBoxColumn2";
+            this.employeeIdDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // supervisorEmployeeIdDataGridViewTextBoxColumn
+            // 
+            this.supervisorEmployeeIdDataGridViewTextBoxColumn.DataPropertyName = "SupervisorEmployeeId";
+            this.supervisorEmployeeIdDataGridViewTextBoxColumn.HeaderText = "SupervisorEmployeeId";
+            this.supervisorEmployeeIdDataGridViewTextBoxColumn.Name = "supervisorEmployeeIdDataGridViewTextBoxColumn";
+            this.supervisorEmployeeIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // assignedDateDataGridViewTextBoxColumn
+            // 
+            this.assignedDateDataGridViewTextBoxColumn.DataPropertyName = "AssignedDate";
+            this.assignedDateDataGridViewTextBoxColumn.HeaderText = "AssignedDate";
+            this.assignedDateDataGridViewTextBoxColumn.Name = "assignedDateDataGridViewTextBoxColumn";
+            this.assignedDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // releasedDateDataGridViewTextBoxColumn
+            // 
+            this.releasedDateDataGridViewTextBoxColumn.DataPropertyName = "ReleasedDate";
+            this.releasedDateDataGridViewTextBoxColumn.HeaderText = "ReleasedDate";
+            this.releasedDateDataGridViewTextBoxColumn.Name = "releasedDateDataGridViewTextBoxColumn";
+            this.releasedDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // supervisorBindingSource
+            // 
+            this.supervisorBindingSource.DataMember = "Supervisor";
+            this.supervisorBindingSource.DataSource = this.dBDataSet2;
+            // 
+            // dBDataSet2
+            // 
+            this.dBDataSet2.DataSetName = "DBDataSet2";
+            this.dBDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dataGridView_EmployeeDepartment
             // 
             this.dataGridView_EmployeeDepartment.AllowUserToAddRows = false;
@@ -226,6 +427,37 @@ namespace Client
             this.dataGridView_EmployeeDepartment.ReadOnly = true;
             this.dataGridView_EmployeeDepartment.Size = new System.Drawing.Size(510, 90);
             this.dataGridView_EmployeeDepartment.TabIndex = 5;
+            // 
+            // employeeDeparmentIdDataGridViewTextBoxColumn
+            // 
+            this.employeeDeparmentIdDataGridViewTextBoxColumn.DataPropertyName = "EmployeeDeparmentId";
+            this.employeeDeparmentIdDataGridViewTextBoxColumn.HeaderText = "EmployeeDeparmentId";
+            this.employeeDeparmentIdDataGridViewTextBoxColumn.Name = "employeeDeparmentIdDataGridViewTextBoxColumn";
+            this.employeeDeparmentIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // employeeIdDataGridViewTextBoxColumn1
+            // 
+            this.employeeIdDataGridViewTextBoxColumn1.DataPropertyName = "EmployeeId";
+            this.employeeIdDataGridViewTextBoxColumn1.HeaderText = "EmployeeId";
+            this.employeeIdDataGridViewTextBoxColumn1.Name = "employeeIdDataGridViewTextBoxColumn1";
+            this.employeeIdDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // departmentIdDataGridViewTextBoxColumn
+            // 
+            this.departmentIdDataGridViewTextBoxColumn.DataPropertyName = "DepartmentId";
+            this.departmentIdDataGridViewTextBoxColumn.HeaderText = "DepartmentId";
+            this.departmentIdDataGridViewTextBoxColumn.Name = "departmentIdDataGridViewTextBoxColumn";
+            this.departmentIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // employeeDeparmentBindingSource
+            // 
+            this.employeeDeparmentBindingSource.DataMember = "EmployeeDeparment";
+            this.employeeDeparmentBindingSource.DataSource = this.dBDataSet1;
+            // 
+            // dBDataSet1
+            // 
+            this.dBDataSet1.DataSetName = "DBDataSet1";
+            this.dBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridView_EmployeeService
             // 
@@ -244,6 +476,44 @@ namespace Client
             this.dataGridView_EmployeeService.ReadOnly = true;
             this.dataGridView_EmployeeService.Size = new System.Drawing.Size(510, 77);
             this.dataGridView_EmployeeService.TabIndex = 6;
+            // 
+            // employeeServiceIdDataGridViewTextBoxColumn
+            // 
+            this.employeeServiceIdDataGridViewTextBoxColumn.DataPropertyName = "EmployeeServiceId";
+            this.employeeServiceIdDataGridViewTextBoxColumn.HeaderText = "EmployeeServiceId";
+            this.employeeServiceIdDataGridViewTextBoxColumn.Name = "employeeServiceIdDataGridViewTextBoxColumn";
+            this.employeeServiceIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // employeeIdDataGridViewTextBoxColumn
+            // 
+            this.employeeIdDataGridViewTextBoxColumn.DataPropertyName = "EmployeeId";
+            this.employeeIdDataGridViewTextBoxColumn.HeaderText = "EmployeeId";
+            this.employeeIdDataGridViewTextBoxColumn.Name = "employeeIdDataGridViewTextBoxColumn";
+            this.employeeIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // startDateDataGridViewTextBoxColumn
+            // 
+            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
+            this.startDateDataGridViewTextBoxColumn.HeaderText = "StartDate";
+            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
+            this.startDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // endDateDataGridViewTextBoxColumn
+            // 
+            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
+            this.endDateDataGridViewTextBoxColumn.HeaderText = "EndDate";
+            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
+            this.endDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // employeeServiceBindingSource
+            // 
+            this.employeeServiceBindingSource.DataMember = "EmployeeService";
+            this.employeeServiceBindingSource.DataSource = this.dBDataSet;
+            // 
+            // dBDataSet
+            // 
+            this.dBDataSet.DataSetName = "DBDataSet";
+            this.dBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button1
             // 
@@ -318,299 +588,38 @@ namespace Client
             this.label_EmployeeService.TabIndex = 14;
             this.label_EmployeeService.Text = "EmployeeService";
             // 
-            // dBDataSet
-            // 
-            this.dBDataSet.DataSetName = "DBDataSet";
-            this.dBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // employeeServiceBindingSource
-            // 
-            this.employeeServiceBindingSource.DataMember = "EmployeeService";
-            this.employeeServiceBindingSource.DataSource = this.dBDataSet;
-            // 
             // employeeServiceTableAdapter
             // 
             this.employeeServiceTableAdapter.ClearBeforeFill = true;
-            // 
-            // employeeServiceIdDataGridViewTextBoxColumn
-            // 
-            this.employeeServiceIdDataGridViewTextBoxColumn.DataPropertyName = "EmployeeServiceId";
-            this.employeeServiceIdDataGridViewTextBoxColumn.HeaderText = "EmployeeServiceId";
-            this.employeeServiceIdDataGridViewTextBoxColumn.Name = "employeeServiceIdDataGridViewTextBoxColumn";
-            this.employeeServiceIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // employeeIdDataGridViewTextBoxColumn
-            // 
-            this.employeeIdDataGridViewTextBoxColumn.DataPropertyName = "EmployeeId";
-            this.employeeIdDataGridViewTextBoxColumn.HeaderText = "EmployeeId";
-            this.employeeIdDataGridViewTextBoxColumn.Name = "employeeIdDataGridViewTextBoxColumn";
-            this.employeeIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // startDateDataGridViewTextBoxColumn
-            // 
-            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
-            this.startDateDataGridViewTextBoxColumn.HeaderText = "StartDate";
-            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
-            this.startDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // endDateDataGridViewTextBoxColumn
-            // 
-            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
-            this.endDateDataGridViewTextBoxColumn.HeaderText = "EndDate";
-            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
-            this.endDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dBDataSet1
-            // 
-            this.dBDataSet1.DataSetName = "DBDataSet1";
-            this.dBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // employeeDeparmentBindingSource
-            // 
-            this.employeeDeparmentBindingSource.DataMember = "EmployeeDeparment";
-            this.employeeDeparmentBindingSource.DataSource = this.dBDataSet1;
             // 
             // employeeDeparmentTableAdapter
             // 
             this.employeeDeparmentTableAdapter.ClearBeforeFill = true;
             // 
-            // employeeDeparmentIdDataGridViewTextBoxColumn
-            // 
-            this.employeeDeparmentIdDataGridViewTextBoxColumn.DataPropertyName = "EmployeeDeparmentId";
-            this.employeeDeparmentIdDataGridViewTextBoxColumn.HeaderText = "EmployeeDeparmentId";
-            this.employeeDeparmentIdDataGridViewTextBoxColumn.Name = "employeeDeparmentIdDataGridViewTextBoxColumn";
-            this.employeeDeparmentIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // employeeIdDataGridViewTextBoxColumn1
-            // 
-            this.employeeIdDataGridViewTextBoxColumn1.DataPropertyName = "EmployeeId";
-            this.employeeIdDataGridViewTextBoxColumn1.HeaderText = "EmployeeId";
-            this.employeeIdDataGridViewTextBoxColumn1.Name = "employeeIdDataGridViewTextBoxColumn1";
-            this.employeeIdDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // departmentIdDataGridViewTextBoxColumn
-            // 
-            this.departmentIdDataGridViewTextBoxColumn.DataPropertyName = "DepartmentId";
-            this.departmentIdDataGridViewTextBoxColumn.HeaderText = "DepartmentId";
-            this.departmentIdDataGridViewTextBoxColumn.Name = "departmentIdDataGridViewTextBoxColumn";
-            this.departmentIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dBDataSet2
-            // 
-            this.dBDataSet2.DataSetName = "DBDataSet2";
-            this.dBDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // supervisorBindingSource
-            // 
-            this.supervisorBindingSource.DataMember = "Supervisor";
-            this.supervisorBindingSource.DataSource = this.dBDataSet2;
-            // 
             // supervisorTableAdapter
             // 
             this.supervisorTableAdapter.ClearBeforeFill = true;
-            // 
-            // supervisorIdDataGridViewTextBoxColumn
-            // 
-            this.supervisorIdDataGridViewTextBoxColumn.DataPropertyName = "SupervisorId";
-            this.supervisorIdDataGridViewTextBoxColumn.HeaderText = "SupervisorId";
-            this.supervisorIdDataGridViewTextBoxColumn.Name = "supervisorIdDataGridViewTextBoxColumn";
-            this.supervisorIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // employeeIdDataGridViewTextBoxColumn2
-            // 
-            this.employeeIdDataGridViewTextBoxColumn2.DataPropertyName = "EmployeeId";
-            this.employeeIdDataGridViewTextBoxColumn2.HeaderText = "EmployeeId";
-            this.employeeIdDataGridViewTextBoxColumn2.Name = "employeeIdDataGridViewTextBoxColumn2";
-            this.employeeIdDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // supervisorEmployeeIdDataGridViewTextBoxColumn
-            // 
-            this.supervisorEmployeeIdDataGridViewTextBoxColumn.DataPropertyName = "SupervisorEmployeeId";
-            this.supervisorEmployeeIdDataGridViewTextBoxColumn.HeaderText = "SupervisorEmployeeId";
-            this.supervisorEmployeeIdDataGridViewTextBoxColumn.Name = "supervisorEmployeeIdDataGridViewTextBoxColumn";
-            this.supervisorEmployeeIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // assignedDateDataGridViewTextBoxColumn
-            // 
-            this.assignedDateDataGridViewTextBoxColumn.DataPropertyName = "AssignedDate";
-            this.assignedDateDataGridViewTextBoxColumn.HeaderText = "AssignedDate";
-            this.assignedDateDataGridViewTextBoxColumn.Name = "assignedDateDataGridViewTextBoxColumn";
-            this.assignedDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // releasedDateDataGridViewTextBoxColumn
-            // 
-            this.releasedDateDataGridViewTextBoxColumn.DataPropertyName = "ReleasedDate";
-            this.releasedDateDataGridViewTextBoxColumn.HeaderText = "ReleasedDate";
-            this.releasedDateDataGridViewTextBoxColumn.Name = "releasedDateDataGridViewTextBoxColumn";
-            this.releasedDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dBDataSet3
-            // 
-            this.dBDataSet3.DataSetName = "DBDataSet3";
-            this.dBDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // salaryBindingSource
-            // 
-            this.salaryBindingSource.DataMember = "Salary";
-            this.salaryBindingSource.DataSource = this.dBDataSet3;
             // 
             // salaryTableAdapter
             // 
             this.salaryTableAdapter.ClearBeforeFill = true;
             // 
-            // salaryIdDataGridViewTextBoxColumn
-            // 
-            this.salaryIdDataGridViewTextBoxColumn.DataPropertyName = "SalaryId";
-            this.salaryIdDataGridViewTextBoxColumn.HeaderText = "SalaryId";
-            this.salaryIdDataGridViewTextBoxColumn.Name = "salaryIdDataGridViewTextBoxColumn";
-            this.salaryIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // employeeIdDataGridViewTextBoxColumn3
-            // 
-            this.employeeIdDataGridViewTextBoxColumn3.DataPropertyName = "EmployeeId";
-            this.employeeIdDataGridViewTextBoxColumn3.HeaderText = "EmployeeId";
-            this.employeeIdDataGridViewTextBoxColumn3.Name = "employeeIdDataGridViewTextBoxColumn3";
-            this.employeeIdDataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // salaryDataGridViewTextBoxColumn
-            // 
-            this.salaryDataGridViewTextBoxColumn.DataPropertyName = "Salary";
-            this.salaryDataGridViewTextBoxColumn.HeaderText = "Salary";
-            this.salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
-            this.salaryDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dBDataSet4
-            // 
-            this.dBDataSet4.DataSetName = "DBDataSet4";
-            this.dBDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // departmentBindingSource
-            // 
-            this.departmentBindingSource.DataMember = "Department";
-            this.departmentBindingSource.DataSource = this.dBDataSet4;
-            // 
             // departmentTableAdapter
             // 
             this.departmentTableAdapter.ClearBeforeFill = true;
-            // 
-            // departmentIdDataGridViewTextBoxColumn1
-            // 
-            this.departmentIdDataGridViewTextBoxColumn1.DataPropertyName = "DepartmentId";
-            this.departmentIdDataGridViewTextBoxColumn1.HeaderText = "DepartmentId";
-            this.departmentIdDataGridViewTextBoxColumn1.Name = "departmentIdDataGridViewTextBoxColumn1";
-            this.departmentIdDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // departmenNameDataGridViewTextBoxColumn
-            // 
-            this.departmenNameDataGridViewTextBoxColumn.DataPropertyName = "DepartmenName";
-            this.departmenNameDataGridViewTextBoxColumn.HeaderText = "DepartmenName";
-            this.departmenNameDataGridViewTextBoxColumn.Name = "departmenNameDataGridViewTextBoxColumn";
-            this.departmenNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dBDataSet5
-            // 
-            this.dBDataSet5.DataSetName = "DBDataSet5";
-            this.dBDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // addressBindingSource
-            // 
-            this.addressBindingSource.DataMember = "Address";
-            this.addressBindingSource.DataSource = this.dBDataSet5;
             // 
             // addressTableAdapter
             // 
             this.addressTableAdapter.ClearBeforeFill = true;
             // 
-            // addressIdDataGridViewTextBoxColumn
-            // 
-            this.addressIdDataGridViewTextBoxColumn.DataPropertyName = "AddressId";
-            this.addressIdDataGridViewTextBoxColumn.HeaderText = "AddressId";
-            this.addressIdDataGridViewTextBoxColumn.Name = "addressIdDataGridViewTextBoxColumn";
-            this.addressIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // employeeIdDataGridViewTextBoxColumn4
-            // 
-            this.employeeIdDataGridViewTextBoxColumn4.DataPropertyName = "EmployeeId";
-            this.employeeIdDataGridViewTextBoxColumn4.HeaderText = "EmployeeId";
-            this.employeeIdDataGridViewTextBoxColumn4.Name = "employeeIdDataGridViewTextBoxColumn4";
-            this.employeeIdDataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // streetNumberDataGridViewTextBoxColumn
-            // 
-            this.streetNumberDataGridViewTextBoxColumn.DataPropertyName = "StreetNumber";
-            this.streetNumberDataGridViewTextBoxColumn.HeaderText = "StreetNumber";
-            this.streetNumberDataGridViewTextBoxColumn.Name = "streetNumberDataGridViewTextBoxColumn";
-            this.streetNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cityDataGridViewTextBoxColumn
-            // 
-            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
-            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
-            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
-            this.cityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // stateDataGridViewTextBoxColumn
-            // 
-            this.stateDataGridViewTextBoxColumn.DataPropertyName = "State";
-            this.stateDataGridViewTextBoxColumn.HeaderText = "State";
-            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
-            this.stateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // zipCodeDataGridViewTextBoxColumn
-            // 
-            this.zipCodeDataGridViewTextBoxColumn.DataPropertyName = "ZipCode";
-            this.zipCodeDataGridViewTextBoxColumn.HeaderText = "ZipCode";
-            this.zipCodeDataGridViewTextBoxColumn.Name = "zipCodeDataGridViewTextBoxColumn";
-            this.zipCodeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dBDataSet6
-            // 
-            this.dBDataSet6.DataSetName = "DBDataSet6";
-            this.dBDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataMember = "Employee";
-            this.employeeBindingSource.DataSource = this.dBDataSet6;
-            // 
             // employeeTableAdapter
             // 
             this.employeeTableAdapter.ClearBeforeFill = true;
             // 
-            // employeeIdDataGridViewTextBoxColumn5
+            // dbDataSet51
             // 
-            this.employeeIdDataGridViewTextBoxColumn5.DataPropertyName = "EmployeeId";
-            this.employeeIdDataGridViewTextBoxColumn5.HeaderText = "EmployeeId";
-            this.employeeIdDataGridViewTextBoxColumn5.Name = "employeeIdDataGridViewTextBoxColumn5";
-            this.employeeIdDataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            this.firstNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // middleNameDataGridViewTextBoxColumn
-            // 
-            this.middleNameDataGridViewTextBoxColumn.DataPropertyName = "MiddleName";
-            this.middleNameDataGridViewTextBoxColumn.HeaderText = "MiddleName";
-            this.middleNameDataGridViewTextBoxColumn.Name = "middleNameDataGridViewTextBoxColumn";
-            this.middleNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sSNDataGridViewTextBoxColumn
-            // 
-            this.sSNDataGridViewTextBoxColumn.DataPropertyName = "SSN";
-            this.sSNDataGridViewTextBoxColumn.HeaderText = "SSN";
-            this.sSNDataGridViewTextBoxColumn.Name = "sSNDataGridViewTextBoxColumn";
-            this.sSNDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dbDataSet51.DataSetName = "DBDataSet5";
+            this.dbDataSet51.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // DisplayDBContents
             // 
@@ -636,26 +645,27 @@ namespace Client
             this.Text = "DisplayDBContents";
             this.Load += new System.EventHandler(this.DisplayDBContents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Employees)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Address)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Departments)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Salaries)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Supervisors)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_EmployeeDepartment)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_EmployeeService)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeServiceBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeDeparmentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supervisorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salaryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Address)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Departments)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Salaries)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salaryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Supervisors)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supervisorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_EmployeeDepartment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeDeparmentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_EmployeeService)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeServiceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbDataSet51)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -664,7 +674,7 @@ namespace Client
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView_Employees;
-        private System.Windows.Forms.DataGridView dataGridView_Address;
+        private DataGridView dataGridView_Address;
         private System.Windows.Forms.DataGridView dataGridView_Departments;
         private System.Windows.Forms.DataGridView dataGridView_Salaries;
         private System.Windows.Forms.DataGridView dataGridView_Supervisors;
@@ -727,5 +737,6 @@ namespace Client
         private System.Windows.Forms.DataGridViewTextBoxColumn middleNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sSNDataGridViewTextBoxColumn;
+        private DBDataSet5 dbDataSet51;
     }
 }

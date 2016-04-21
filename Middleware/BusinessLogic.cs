@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data;
 using Middleware.Models;
 using DataAccess;
 
@@ -86,7 +87,7 @@ namespace Middleware
         /// Gets a list of Addresses from the data layer
         /// </summary>
         /// <returns>List of Addresses</returns>
-        public List<Address> FillAddresses()
+        public DataTable FillAddresses()
         {
             return data.GetAddresses();
         }

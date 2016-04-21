@@ -1,6 +1,8 @@
 ﻿
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Net.Sockets;
 
 namespace DataAccess
 {
@@ -126,14 +128,22 @@ namespace DataAccess
         }
 
         /// <summary>
-        /// Get a list of all employee addresses from the DB
+        /// Get a DataTable of all employee addresses from the DB
         /// </summary>
-        /// <returns>List of Addresses</returns>
-        public List<Address> GetAddresses()
+        /// <returns>DataTable of Addresses</returns>
+        public DataTable GetAddresses()
         {
             using (var db = new DBEntities())
             {
-                return db.Addresses.ToList();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("AddressId");
+                dt.Columns.Add("EmployeeId");
+                dt.Columns.Add("StreetNumber");
+                dt.Columns.Add("City");
+                dt.Columns.Add("State");
+                dt.Columns.Add("ZipCode");
+                dt.Rows.Add(db.EmployeeDeparments.ToArray());
+                return dt;
             }
         }
 

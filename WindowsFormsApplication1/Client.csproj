@@ -180,7 +180,7 @@
     </None>
     <None Include="DBDataSet5.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DBDataSet5.Designer.cs</LastGenOutput>
+      <LastGenOutput>DBDataSet51.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="DBDataSet5.xss">
